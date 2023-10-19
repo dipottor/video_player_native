@@ -27,17 +27,13 @@ class VideoPlayerNativePlugin : FlutterPlugin, MethodCallHandler, ActivityAware,
 
     override fun onMethodCall(@NonNull call: MethodCall, @NonNull result: Result) {
         if (call.method == "getPlatformVersion") {
-            val data: String? = call.argument("data");
-//      print("contentUrl"+data)
-//
-//      val contentUrl = call.arguments as String
-//      print("contentUrl"+contentUrl)
+            val contentUrl: String? = call.argument("data");
+
             var intent = Intent(activity, PlayerActivity::class.java)
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_MULTIPLE_TASK)
-//      intent.putExtra("contentUrl", contentUrl)
+             intent.putExtra("contentUrl", contentUrl)
             this.context.startActivity(intent)
-
-            result.success("Android ${android.os.Build.VERSION.RELEASE} $data")
+            result.success("Android ${android.os.Build.VERSION.RELEASE} $contentUrl")
         } else {
             result.notImplemented()
         }

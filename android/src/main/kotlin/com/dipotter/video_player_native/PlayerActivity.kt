@@ -33,15 +33,13 @@ class PlayerActivity : AppCompatActivity() {
     private var playWhenReady = true
     private var mediaItemIndex = 0
     private var playbackPosition = 0L
-    private var contentUrl =
-        "https://stage-upload-test.s3.ap-south-1.amazonaws.com/1100/master.m3u8"
-            ;
+    private var contentUrl =""   ;
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(viewBinding.root)
         // Retrieve the message from the Intent
-        //   contentUrl = intent.getStringExtra("contentUrl").toString()
+           contentUrl = intent.getStringExtra("contentUrl").toString()
 
     }
 

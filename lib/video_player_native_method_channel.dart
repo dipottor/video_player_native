@@ -11,6 +11,7 @@ class MethodChannelVideoPlayerNative extends VideoPlayerNativePlatform {
 
   @override
   Future<String?> networkUri(String contentUrl) async {
+    print("object:"+contentUrl);
     final version = await methodChannel.invokeMethod<String>('getPlatformVersion',{'data': contentUrl});
     return version;
   }
