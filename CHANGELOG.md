@@ -1,2 +1,2 @@
-0.0.2
-code formatting
+0.0.3
+Minor fixes
