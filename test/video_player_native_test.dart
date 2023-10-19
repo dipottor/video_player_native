@@ -9,7 +9,7 @@ class MockVideoPlayerNativePlatform
     implements VideoPlayerNativePlatform {
 
   @override
-  Future<String?> getPlatformVersion() => Future.value('42');
+  Future<String?> networkUri(String contentUrl) => Future.value('42');
 }
 
 void main() {
@@ -24,6 +24,6 @@ void main() {
     MockVideoPlayerNativePlatform fakePlatform = MockVideoPlayerNativePlatform();
     VideoPlayerNativePlatform.instance = fakePlatform;
 
-    expect(await videoPlayerNativePlugin.getPlatformVersion(), '42');
+    expect(await videoPlayerNativePlugin.networkUri("abcd"), '42');
   });
 }

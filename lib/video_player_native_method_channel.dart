@@ -10,8 +10,8 @@ class MethodChannelVideoPlayerNative extends VideoPlayerNativePlatform {
   final methodChannel = const MethodChannel('video_player_native');
 
   @override
-  Future<String?> getPlatformVersion() async {
-    final version = await methodChannel.invokeMethod<String>('getPlatformVersion');
+  Future<String?> networkUri(String contentUrl) async {
+    final version = await methodChannel.invokeMethod<String>('getPlatformVersion',{'data': contentUrl});
     return version;
   }
 }

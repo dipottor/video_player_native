@@ -23,7 +23,7 @@ abstract class VideoPlayerNativePlatform extends PlatformInterface {
     _instance = instance;
   }
 
-  Future<String?> getPlatformVersion() {
+  Future<String?> networkUri(String contentUrl) {
     throw UnimplementedError('platformVersion() has not been implemented.');
   }
 }
