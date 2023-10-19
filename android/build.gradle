@@ -23,9 +23,10 @@ allprojects {
 
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
+apply plugin: 'org.jetbrains.kotlin.android'
 
 android {
-    compileSdkVersion 31
+    compileSdkVersion 34
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -43,4 +44,22 @@ android {
     defaultConfig {
         minSdkVersion 16
     }
+
+    // Step 1
+    buildFeatures {
+        viewBinding true
+    }
+    def mediaVersion = "1.0.1"
+    dependencies {
+
+        implementation 'androidx.appcompat:appcompat:1.6.1'
+        implementation "androidx.media3:media3-exoplayer:$mediaVersion"
+        implementation "androidx.media3:media3-ui:$mediaVersion"
+        implementation "androidx.media3:media3-exoplayer-dash:$mediaVersion"
+        implementation "androidx.media3:media3-exoplayer-hls:$mediaVersion"
+    }
+}
+
+dependencies {
+    implementation 'androidx.core:core-ktx:+'
 }

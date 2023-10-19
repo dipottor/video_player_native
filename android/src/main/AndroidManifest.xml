@@ -1,3 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
   package="com.dipotter.video_player_native">
+    <application
+        android:theme="@style/Theme.AppCompat.Light">
+        <activity android:name=".PlayerActivity"/>
+    </application>
 </manifest>
