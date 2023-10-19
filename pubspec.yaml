@@ -1,6 +1,7 @@
 name: video_player_native
-description: The Flutter video player leverages the power of both native ExoPlayer and AVPlayer to provide a seamless and high-performance video playback experience. By integrating these native video players, Flutter developers can offer their users top-notch video playback capabilities, taking full advantage of the underlying platform's features and optimizations. This combination ensures smooth video streaming, excellent codec support, and compatibility with various video formats, making it an ideal choice for developers seeking robust video playback solutions in their Flutter applications.
-version: 0.0.1
+description:
+  Leveraging native ExoPlayer and AVPlayer, the Flutter video player offers optimized video playback. This integration ensures top-notch performance, seamless streaming, and broad codec support, enhancing the user experience in Flutter applications.
+version: 0.0.2
 repository: https://github.com/dipottor/video_player_native.git
 
 environment:
